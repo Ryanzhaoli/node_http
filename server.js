@@ -36,7 +36,7 @@ http
             res.write("<h1>Home Page</h1>");
             break;
           case "/about":
-            const about = { name: "Austin", age: 27, height: `5ft 9in` };
+            const about = { name: "Ryan", city: "Los Angeles" };
             res.setHeader("Content-Type", "application/json");
             res.write(JSON.stringify(about));
             break;
