@@ -33,12 +33,12 @@ http
         switch(url) {
           case "/":
             res.setHeader("Content-Type", "text/html" );
-            res.write("<h1>Home Page</h1>");
+            res.write(populateHTML("raise the anthem"));
             break;
           case "/about":
-            const about = { name: "Ryan", city: "Los Angeles" };
+            const details = { name: "Ryan", city: "Los Angeles" };
             res.setHeader("Content-Type", "application/json");
-            res.write(JSON.stringify(about));
+            res.write(JSON.stringify(details));
             break;
           case "/echo":
             res.setHeader("Content-Type", "application/json");
